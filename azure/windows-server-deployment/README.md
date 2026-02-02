@@ -6,13 +6,15 @@
 ---
 
 ## Objective
-
-Example:
-
+Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure to gain hands-on experience with cloud, networking and basic server administration.
 
 ## Lab Environment
+**Cloud Platform:** Microsoft Azure
+
+**Operating System:** Windows Server 2025
 
 ## Prerequisites
+- Create an account on Microsoft Azure
 
 ## Architecture Overview
 
