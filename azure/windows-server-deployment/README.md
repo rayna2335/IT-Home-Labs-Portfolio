@@ -73,7 +73,7 @@ CLick on Windows and 'Restart'
 
 ### Step 10: Log back into your Window Server
 You will have a fully functional Windows Server instance with roles and features all set up.
-
+<img src="screenshots/05-Server Manager with roles and features installed.png" alt="Server Manager with roles and features installed" width="650">
 ## Issues/Troubleshooting
 To ensure you keep your costs low on Microsoft Azure, make sure to deallocate your VM after each use OR you can delete the resource group to keep it at no cost (Optional)
 
