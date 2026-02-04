@@ -1,56 +1,69 @@
 # Domain Controller Promotion
 
 ## Objective
-Domain Controller is the controller that manages all the users/groups/computers access, permissions on the network. The purpose of this lab is to turn the Windows server into a Domain Controller with Active Directory.<br>
+A Domain Controller (DC) manages authentication, authorization, and directory services for users, groups, and computers within a Windows domain. The purpose of this lab is to promote a Windows Server to a Domain Controller by installing and configuring Active Directory Domain Services (AD DS).<br>
+
 In this lab, I will:<br>
 
-- Promoting Domain Controller
-- Creating a domain 
-- Verify everything is setup correctly.
+- Promote a Windows Server to a domain controller
+- Create a domain name
+- Add forests and OUs
+- Verify the steps
 
 ## Prerequisites
-1. Have your Windows Server hosted on Microsoft Azure cloud
-2. Roles and Features are fully installed on Windows Server
-- Active Directory Domain Services
-- DHCP Servers
-- DNS Servers
-- Print and Document Services
-- Web Server (IIS)
+1. Have Windows Server hosted on Microsoft Azure cloud
+2. Roles and Features are installed on Windows Server.<br>
 
-<br>Refer to: [Window Server 2025 Deployment](/azure/windows-server-deployment/README.md)
+    Those are:
+- Active Directory Domain Services (AD DS)
+- DNS Servers
+- DHCP Servers (Used in future lab)
+- Print and Document Services (Used in future lab)
+- Web Server (IIS) (Used in future lab)
+
+\* For DC promotion, only AD DS and DNS Servers are required.
+
+<br>Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/README.md)
 
 ## Steps
-## Step 1: Access All Servers Task Details and Notifications
-- On your server manager go to AD DS tab and click on 'more...' at "Configuration required for Active Directory Domain Systems at 'your domain name'"
+### Step 1: Access All Servers Task Details and Notifications
+- On the Server Manager, go to the 'AD DS' tab on the left and click on 'More..' that says "Configuration required for Active Directory Domain Services at 'your domain name'"
 <img src="screenshots/01- Server Manager AD DS.png" alt="Server Manager ADS tab" width="650">
 
-## Step 2: Promote the server to a domain controller
-- On the task, under Actions, click on 'Promote this server to a domain controller'.
+### Step 2: Promote the Windows server to a domain controller
+- Click on 'Promote this server to a domain controller' under the Action column.
 <img src="screenshots/02-Promote server to DC.png" alt="Promote Server to a DC" width="650">
 
-## Step 3: Deployment Configuration
-- Add a new forest and 'lab.local' for your Root Domain name in Deployment Configuration tab
-- Create Password for DSRM in the Domain Controller Options tab
-- At the Prerequisites Check tab, install the necessary prerequisites and it will restart after successful installation.
+### Step 3: Deployment Configuration
+- Select 'Add a new forest.' 
+- Enter the Root domain name, such as `lab.local`, for homelab purposes
 
-## Step 4: Deployment Configuration
-- Search Active Directory Users and Computers in the search bar
+    \* Use other name in real settings as 'lab.local' will cause an issue with DNS.
+
+- Create a password for Directory Services Restore Mode (DSRM) in the Domain Controller Options tab.
+
+- At the 'Prerequisites Check' tab, install the necessary prerequisites, and the system will restart after a successful installation.
+
+### Step 4: Verify Active Directory Installation
+- Search 'Active Directory Users and Computers' in the search bar and click on it.
 <img src="screenshots/03- Active Directory Users and Computers.png" alt="Active Directory Users and Computers" width="650">
 
-- Forest: is your domain
-- Organizational Units (OU) for your folders
+    \* Forest, and Organizational Unit (OU) is populated under your root domain name that you created in Step 3.
 
-## Step 5: Create Users, Groups, and Computers OU
-- Right click on your domain -> new -> Organizational Unit and name your branch
-- Right click on the OU you just created add new -> Organizational unit and name it 'Users'
-- Do that same one for 'Groups' and 'Computers'
+### Step 5: Create Users, Groups, and Computers OU
+- Right click on your root domain name -> New -> Organizational Unit and name your branch. 
+    - Example name: `Branch1`
+- Right click on the OU you just created, add new -> Organizational unit, and name it 'Users.'
+- Repeat the process to add 'Groups' and 'Computers' under your branch.
 <img src="screenshots/04 - Forest of OUs.png" alt="Forest of OUs" width="650">
 
-## Step 6: Add a User in the User OU
-- Right click on Users -> New -> User
-- Add First and Last name and User logon name as firstname.lastname format.
-- Click 'next' and create a password and 'finish'
+### Step 6: Add a User in the User OU
+- Right click on Users you just created -> click New -> User
+- Add first, last name, and User logon name in this format: `firstname.lastname`
+- Click ‘next’, and ‘finish.’
 <img src="screenshots/05-User created.png" alt="Create a user inside User OU" width="650">
+*The user was successfully created under the Users OU*
 
 ## Notes
-- The AD Users and Computers has Forests and OUs of objects.
+- Domain Controllers have a writable copy of the Active Directory database, which allows any changes made to users, groups, or computures are automatically updates accross devices.
+- A Forest represents a top level Active Directory and defines domain name spaces.
