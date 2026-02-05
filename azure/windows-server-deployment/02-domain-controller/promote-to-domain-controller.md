@@ -23,7 +23,7 @@ In this lab, I will:<br>
 
 \* For DC promotion, only AD DS and DNS Servers are required.
 
-<br>Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/README.md)
+<br>Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md)
 
 ## Steps
 ### Step 1: Access All Servers Task Details and Notifications
