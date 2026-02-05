@@ -40,6 +40,7 @@ The purpose of this lab is to add users to the domain and group them to keep per
 
 <img src="screenshots/03-add-users-to-group.png" alt="Added users to a group" width="650">
 
+*Note: Check what user is a member of by double clicking on a user and go to **Member of** tab*
 
 ## Notes
 - User account management tasks such as password resets, account unlocks, and account disablement are commonly performed through ADUC.
