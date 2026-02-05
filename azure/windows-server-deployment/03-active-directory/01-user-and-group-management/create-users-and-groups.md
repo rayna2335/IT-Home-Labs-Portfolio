@@ -6,7 +6,7 @@
 ## Prerequisites
 1. Have Windows Server hosted on Microsoft Azure cloud
 2. Roles and Features are installed on Windows Server
-    - Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/README.md) 
+    - Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/windows-server-deployment.md) 
 
 3. Promote Windows server to Domain Controller 
     - Refer to: [Domain Controller Promotion](/azure/windows-server-deployment/post-deployment/domain-controller-promotion/promote-to-domain-controller.md)
