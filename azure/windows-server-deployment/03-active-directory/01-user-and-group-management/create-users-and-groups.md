@@ -33,6 +33,8 @@ The purpose of this lab is to add users to the domain and group them to keep per
   - Group scope: **Global**
   - Group type: **Security**
 
+*Note: Distribution group is a collection of users accounts used primarily for sending emails to multiple people at once* 
+
 <img src="screenshots/02-added-a-group.png" alt="Created a group" width="650">
 
 ### Step 4: Add Users to the Group
