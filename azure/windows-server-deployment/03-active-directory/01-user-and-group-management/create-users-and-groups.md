@@ -45,3 +45,4 @@ The purpose of this lab is to add users to the domain and group them to keep per
 - User account management tasks such as password resets, account unlocks, and account disablement are commonly performed through ADUC.
 - Best practice is to assign permissions to **groups**, not individual users, and then add users to the appropriate groups.
 - Groups are separated into roles/departments to have consistent assignment of permissions.
+- If adding new users that has same permissions as other users. Copy the user from the **Users** container and rename the user. It will automatically populate the permissions into the same group.
