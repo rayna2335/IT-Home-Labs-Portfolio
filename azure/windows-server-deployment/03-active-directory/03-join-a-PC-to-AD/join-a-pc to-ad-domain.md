@@ -1,7 +1,7 @@
 # Join a PC client to AD domain 
 
 ## Objective
-The purpose of this lab is to join a PC to domain, <br>
+The purpose of this lab is to understand how to domain join a PC and verify that a PC is connected to the DC. <br>
 
 ## Prerequisites
 1. Have Windows Server hosted on Microsoft Azure cloud
@@ -15,50 +15,115 @@ The purpose of this lab is to join a PC to domain, <br>
 ## Steps
 
 ### Step 1: Create a Virtual PC
-- Follow the same set up in: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md) and name the VM. (this will be the workgroup)
+- Follow the same setup in: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md) and name the VM.
 
-- Check Subnet by going on **Networking** tab and under **subnet** you can set the same subnet range as your DC subnet.
+- Check the subnet by going to the **Networking** tab and, under **Subnet**, set the same Virtual Network(VNet) and subnet as your DC.
 
-- Go to 'Network settings' and click on your NIC.
-- Check Your Private IP address and it should be in the same range as the subnet for DC
+- Go to **Network settings** and click on your NIC.
 
-*Note: in Microsoft Azure use the Windows Server 2025 Datacenter image since the Windows 11 Pro require to to have your own license*
+- Check your private IP address. It should be in the same range as the subnet for the DC.
 
-*Note: This PC should be in the same subnet as your DC (Important!)*
+<img src="screenshots/01-check-vnet-and-subnet.png" alt="Match VNet and subnet to DC" width="650">
+
+*PC's IP Config. Check Virtual network and Subnet to match the DC's Configuration*
+
+<img src="screenshots/04-dc-ip-settings.png" alt="DC IP settings" width="650">
+
+*DC's IP Config. Check that PC's Virtual network and Subnet matches the DC's Configuration*
+
+*Note: In Microsoft Azure, use the Windows Server 2025 Datacenter image since the Windows 11 Pro require to to have your own license*
+
+*Note: This PC should be in the same subnet as your DC (IMPORTANT!)*
 
 
-### Step 2: Resolve this PC to our domain name 
-- On your PC VM, go to DNS servers under Settings.
+### Step 2: Resolve this PC to domain name 
+- On PC's VM, go to **DNS servers** under Settings.
 - Click **Custom**
 
-*Note: Since this is on a Virtual machine and not on a actual enterprise enviroment, we would need to configure the DNS server to our Domain Controller*
+<img src="screenshots/02-add-domain-name-as-a-member-of-this-pc.png" alt="Add domain name as a member of this PC" width="650">
+
+*Note: Since this is on a Virtual machine and not on a actual enterprise enviroment, we would need to manually configure the DNS server to our Domain Controller*
 
 
 ### Step 3: Connect via Bastion for your PC
 
-### Step 4: 
+### Step 4: Connect Domain to PC
 - Go to Settings from the Start menu
-- Systems -> About -> Advaneced systems settings -> Computer Name 
-    - The device is initially set to WORKGROUP
-- Click 'Change..' to put this PC on the DC
-- Click Member of Domain option and enter the same domain name from: [Domain Controller Promotion](/azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md) which in this case was **lab.local**
-- enterthe domain username and password.
-- It will restart your computer right after successful joining.
+- Systems -> About -> Advanced Systems Settings 
+- Go to **Computer Name** tab
+- The device is initially set to WORKGROUP
+- Click 'Change..' to join this PC to the DC
+- Click **Member of Domain** option and enter the same domain name from: [Domain Controller Promotion](/azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md) (In this case: **lab.local**)
+
+*Note: There mayb be an issue here because Bastion sometimes does not update the DNS. Manually input the DNS IP address. See Troubleshooting steps for more information.*
+
+- Enter the domain username and password.
+
+<img src="screenshots/06-Connect to your DC.png" alt="Connect to DC computer" width="650">
+
+- Will see a message confirming the fomain was successufly joined. The computer will restart after successful joining.
+
+<img src="screenshots/07-access-to-your-dc.png" alt="Success message of accesss DC" width="650">
 
 
-### Troubleshooting:
-- "AD DC for the domain could nto be contacted" which means that DNS is not able to reach the domain
-1. in the search bar type: **ncpa.cpl** for Ethernet Connector
-2. Right click and go to properties
-3. Right click on IPv4
-4. On a seporate tab, open Command Prompt
-5. **ipconfig /all** to see your DNS Server IP and if this address doesnt match up to your DC IP, go back to step 2 and enter your DC IP and click "ok"
+    ### Troubleshooting:
+    <img src="screenshots/03-troubleshooting.png" alt="Could not be contacted error" width="650">
+
+    - If yousee an error:
+        - "AD DC for the domain could nto be contacted" which means that DNS is not able to reach the domain
+    - This means DNS is not able to reach the domain so:
+        -  Make sure that your newly created PC is in the same subnet and Virtual network (VNet) as your DC
+
+    Steps to fix: 
+    1. In the search bar, type: **ncpa.cpl** to open Ethernet Connector
+    2. Right click on Ethernet adapter and go to **Properties**
+    3. Click on IPv4, and go to **Properties**
+
+    4. Then, on a seporate tab, open Command Prompt
+    5. Run: **ipconfig /all** 
+        - to check the DNS Server IP 
+        - If it does not match your DC's IP address, go back to IPv4 setting and manually enter your DC's IP address. Click **Ok** 
+    
+    <img src="screenshots/05-troubleshooting-match-DNS-to-DC IP.png" alt="Match DNS to DCs" width="650">
+
+### Step 5: Verify that the PC is Connected to the DC
+- Open Command Prompt on the PC
+- Ping the domain name:
+    - **ping lab-dc** OR **ping lab.local**
+
+    <img src="screenshots/08-check-for-connectivity-on-dc-from-pc.png" alt="Check for connctivity on DC from PC" width="650">
+
+- If success you will recieve connection replies and if not, the request will time out.
+
+- Go on your DC VM and go to **Active Directory Users and Computers**. Under **Computers**, the newly created PC should appear.
+- Move the new PC to the correct OU by dragging it to the branch you created called Computers.
+
+<img src="screenshots/09-join-computer-to-domain.png" alt="Propagated PC on DC" width="650">
+
+### Step 6: Commands to see User Accounts
+- Run **net user** to see what user is on the system
+
+<img src="screenshots/10-net-user.png" alt="Net user command" width="650"> 
+
+- Run **net localgroup administrators** to seewho is the member of the Administrators group.
+
+<img src="screenshots/12-net-localgroup-admin.png" alt="Command to view who is in the member in the Admin group" width="650">
+
+Another way check:
+    - Search for **Local Users and Groups** in the search bar
+    - Click on **Groups** -> **Administrators**
+    - View the members of the Administrators group.
+
+<img src="screenshots/11-Admin group.png" alt="View who is in the member in the Admin group" width="650">
+
+### Steps 7: Delete Admin User and Group
+- After creating temperary administrator user and group, delete them using:
+    - **net localgroup administrators default /delete**
 
 
-
-
-
-
-
-
-## Notes
+## Concepts used:
+1. VNet
+2. Subnet
+3. Ethernet Connctor
+4. Domain Credentials
+5. Local Credentials

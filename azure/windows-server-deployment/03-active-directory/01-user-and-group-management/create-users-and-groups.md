@@ -49,3 +49,9 @@ The purpose of this lab is to add users to the domain and group them to keep per
 - Best practice is to assign permissions to **groups**, not individual users, and then add users to the appropriate groups.
 - Groups are separated into roles/departments to have consistent assignment of permissions.
 - If adding new users that has same permissions as other users. Copy the user from the **Users** container and rename the user. It will automatically populate the permissions into the same group.
+
+
+
+## Concepts used in this lab
+1. domain
+2. Active Directory Users and Computers (ADUC)
