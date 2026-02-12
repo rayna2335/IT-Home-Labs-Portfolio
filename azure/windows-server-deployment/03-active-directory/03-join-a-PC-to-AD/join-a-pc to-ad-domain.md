@@ -3,6 +3,10 @@
 ## Objective
 The purpose of this lab is to understand how to domain join a PC and verify that a PC is connected to the DC. <br>
 
+## How Domain Join Works (Concept)
+
+## Architecture
+
 ## Prerequisites
 1. Have Windows Server hosted on Microsoft Azure cloud
 2. Roles and Features are installed on Windows Server
@@ -15,6 +19,8 @@ The purpose of this lab is to understand how to domain join a PC and verify that
 ## Steps
 
 ### Step 1: Create a Virtual PC
+*Note: In Microsoft Azure, use the Windows Server 2025 Datacenter image since the Windows 11 Pro require to to have your own license*
+
 - Follow the same setup in: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md) and name the VM.
 
 - Check the subnet by going to the **Networking** tab and, under **Subnet**, set the same Virtual Network(VNet) and subnet as your DC.
@@ -31,15 +37,13 @@ The purpose of this lab is to understand how to domain join a PC and verify that
 
 *DC's IP Config. Check that PC's Virtual network and Subnet matches the DC's Configuration*
 
-*Note: In Microsoft Azure, use the Windows Server 2025 Datacenter image since the Windows 11 Pro require to to have your own license*
-
-*Note: This PC should be in the same subnet as your DC (IMPORTANT!)*
+*Note: This PC should be in the same Virtual Network (VNet) as DC. Being in the same subnet simplifies configuration but not strictly required*
 
 
 ### Step 2: Resolve this PC to domain name 
 - On PC's VM, go to **DNS servers** under Settings.
 - Click **Custom**
-
+- (IMPORTANT!) The client must use the DC's provate IP address as its primary DNS Server
 <img src="screenshots/02-add-domain-name-as-a-member-of-this-pc.png" alt="Add domain name as a member of this PC" width="650">
 
 *Note: Since this is on a Virtual machine and not on a actual enterprise enviroment, we would need to manually configure the DNS server to our Domain Controller*
@@ -89,7 +93,7 @@ The purpose of this lab is to understand how to domain join a PC and verify that
 ### Step 5: Verify that the PC is Connected to the DC
 - Open Command Prompt on the PC
 - Ping the domain name:
-    - **ping lab-dc** OR **ping lab.local**
+    - **ping lab-dc** to test hostname resolution
 
     <img src="screenshots/08-check-for-connectivity-on-dc-from-pc.png" alt="Check for connctivity on DC from PC" width="650">
 
@@ -118,7 +122,8 @@ Another way check:
 
 ### Steps 7: Delete Admin User and Group
 - After creating temperary administrator user and group, delete them using:
-    - **net localgroup administrators default /delete**
+    - To remove a local user: **net user username /delete**
+    - To remove user from admin group: **net localgroup administrators default /delete**
 
 
 ## Concepts used:
@@ -127,3 +132,7 @@ Another way check:
 3. Ethernet Connctor
 4. Domain Credentials
 5. Local Credentials
+
+
+## Notes:
+- Joining a domain only works for windows version Pro/Enterprise. Windows home version does not have the functionally to join the server.
