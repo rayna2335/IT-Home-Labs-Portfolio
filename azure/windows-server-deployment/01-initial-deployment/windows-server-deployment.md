@@ -74,3 +74,12 @@ Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure an
 
 ## What I Learned
 - I learned how to set up Windows server on the cloud and set up the roles and features needed in a common enterprice enviroment.
+
+## Concepts used:
+[Domain Controller](../../00-concepts/concepts.md#🔸-domain-controller)
+
+[Server Manager](../../00-concepts/concepts.md#🔸-server-manager)
+
+[DHCP](../../00-concepts/concepts.md#🔸-dhcp)
+
+[DNS](../../00-concepts/concepts.md#🔸-dns)

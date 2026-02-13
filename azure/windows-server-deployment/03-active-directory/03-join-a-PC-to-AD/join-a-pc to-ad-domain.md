@@ -123,16 +123,20 @@ Another way to check:
     - To remove user from admin group: **net localgroup administrators default /delete**
 
 
-## Concepts used:
-1. VNet
-2. Subnet
-3. Ethernet Connctor
-4. Domain Credentials
-5. Local Credentials
-
-
 ## Notes:
 - Joining a domain only works for windows version Pro/Enterprise. Windows home version does not have the functionally to join the server.
+
+
+## Concepts used:
+[VNet](../../../00-concepts/concepts.md#🔸-vnet)
+
+[Subnet](../../../00-concepts/concepts.md#🔸-subnet)
+
+[Ethernet Connctor](../../../00-concepts/concepts.md#🔸-ethernet-connctor)
+
+[Domain Credentials](../../../00-concepts/concepts.md#🔸-domain-credentials)
+
+[Local Credentials](../../../00-concepts/concepts.md#🔸-local-credentials)
 
 
 

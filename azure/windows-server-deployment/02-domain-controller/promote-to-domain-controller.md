@@ -69,5 +69,16 @@ In this lab, I will:<br>
 - A Forest represents a top level Active Directory and defines domain name spaces.
 
 
+## Concepts used:
+[Organizational Unit](../../00-concepts/concepts.md#🔸-organizational-unit)
+
+[Root Domain Name](../../00-concepts/concepts.md#🔸-root-domain-name)
+
+[Active Directory](../../00-concepts/concepts.md#🔸-active-directory)
+
+[Domain Controller](../../00-concepts/concepts.md#🔸-domain-controller)
+
+[Forest](../../00-concepts/concepts.md#🔸-forest)
+
 
 [wsd]: /azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md
