@@ -1,4 +1,37 @@
-# Home Lab Concepts Dictionary
+# Home Lab Concept Dictionary
+___
+
+### 🔸 Active Directory
+
+#### Definition: 
+#### Purpose:
+#### How it works:
+#### How I applied it in the Lab:
+- Created Organizational Unit (OU) to seporate
+- Created Users and groups inside the OU
+#### Troubleshooting insights (Tips):
+___
+
+### 🔸 Domain Controller (DC)
+
+#### Definition: 
+- A server running Active Directory, implemented in a corporate network to centrally authenticate, manage users, and provide access to a domain environment.
+
+#### Purpose: 
+- Authenticate users and computers
+- Authorize access to resources inside a domain
+
+#### How it works: 
+- DC is a server that exists to run Active Directory (AD). Without Active Directory Domain Services (AD DS), there is no DC.
+    - AD is an overall system
+    - AD DS is a specific role that is installed in the DC
+
+#### How I applied it in the Lab:
+- In my homelab hosted on Microsoft Azure,
+    - Deployed Windows Server and promoted to a DC
+    - Installed AD DS on the system
+
+#### Troubleshooting insights (Tips):
 
 ---
 ## 🔸 Registery
@@ -122,14 +155,6 @@ ___
 ### Troubleshooting insights (Tips):
 
 ___
-## 🔸 Domain Controller
-
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
-___
 ## 🔸 Server Manager
 
 ### Definition:
@@ -168,16 +193,6 @@ ___
 
 ___
 ## 🔸 Root Domain Name
-
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
-
-___
-## 🔸 Active Directory
-
 
 ### Definition:
 ### Purpose:
