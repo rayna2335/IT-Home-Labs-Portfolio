@@ -11,29 +11,25 @@ ___
 - Created Users and groups inside the OU
 #### Troubleshooting insights (Tips):
 ___
-
+---
 ### 🔸 Domain Controller (DC)
 
-#### Definition: 
-- A server running Active Directory, implemented in a corporate network to centrally authenticate, manage users, and provide access to a domain environment.
+**What is it?** A server running Active Directory, implemented to centrally authenticate and manage users within a domain. Important note: Active Directory (AD) is the overall system, while Active Directory Domain Services (AD DS) is a specific server role. A server only becomes a Domain Controller onces it has been promoted with AD DS role.
 
-#### Purpose: 
-- Authenticate users and computers
-- Authorize access to resources inside a domain
+<p align="center">
+  <img src="screenshots/01-domain-controller.png" 
+       alt="Domain Controller Architecture" 
+       width="250"><br>
+  <em>Figure 1: Domain Controller Architecture Overview</em>
+</p>
 
-#### How it works: 
-- DC is a server that exists to run Active Directory (AD). Without Active Directory Domain Services (AD DS), there is no DC.
-    - AD is an overall system
-    - AD DS is a specific role that is installed in the DC
+**What does it do?**  
+- Authenticate the identity of users and computers
+- Authorize access, permissions to resources inside a domain
 
-        <img src="screenshots/01-domain-controller.png" alt="Domain Controller Architecture" width="250">
+**Lab Implementation (My experience)**: In my Microsoft Azure homelab, I deployed a Windows Server 2025 image and promoted to a DC. By installing and configuring AD DS, I created a centralized management for the madeup users and endpoints in my virtual network.
 
-#### How I applied it in the Lab:
-- In my homelab hosted on Microsoft Azure,
-    - Deployed Windows Server and promoted to a DC
-    - Installed AD DS on the system
-
-#### Troubleshooting insights (Tips):
+#### Troubleshooting insights (Tips): 
 
 ---
 ## 🔸 Registery
