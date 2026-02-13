@@ -63,6 +63,8 @@ Refer to: [Domain Controller Promotion - Step 5][dcp]
 
 ## Notes
 
+## Concepts used in this lab
+[Domain Controller](../../../00-concepts/concepts.md#🔸-domain-controller-dc)
 
 
 [wsd]: /azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md

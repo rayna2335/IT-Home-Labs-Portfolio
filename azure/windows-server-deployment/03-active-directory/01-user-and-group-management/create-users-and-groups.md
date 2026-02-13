@@ -52,7 +52,8 @@ The purpose of this lab is to add users to the domain and group them to keep per
 
 
 ## Concepts used in this lab
-1. domain
+[Domain Controller](../../../00-concepts/concepts.md#🔸-domain-controller-dc)
+
 2. Active Directory Users and Computers (ADUC)
 
 

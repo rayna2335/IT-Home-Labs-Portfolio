@@ -70,13 +70,14 @@ In this lab, I will:<br>
 
 
 ## Concepts used:
+
+[Domain Controller](../../00-concepts/concepts.md#🔸-domain-controller-dc)
+
 [Organizational Unit](../../00-concepts/concepts.md#🔸-organizational-unit)
 
 [Root Domain Name](../../00-concepts/concepts.md#🔸-root-domain-name)
 
 [Active Directory](../../00-concepts/concepts.md#🔸-active-directory)
-
-[Domain Controller](../../00-concepts/concepts.md#🔸-domain-controller)
 
 [Forest](../../00-concepts/concepts.md#🔸-forest)
 

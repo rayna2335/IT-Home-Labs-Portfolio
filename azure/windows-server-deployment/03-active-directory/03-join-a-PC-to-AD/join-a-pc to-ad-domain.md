@@ -128,6 +128,8 @@ Another way to check:
 
 
 ## Concepts used:
+[Domain Controller](../../../00-concepts/concepts.md#🔸-domain-controller-dc)
+
 [VNet](../../../00-concepts/concepts.md#🔸-vnet)
 
 [Subnet](../../../00-concepts/concepts.md#🔸-subnet)
