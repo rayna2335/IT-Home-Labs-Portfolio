@@ -26,6 +26,8 @@ ___
     - AD is an overall system
     - AD DS is a specific role that is installed in the DC
 
+        <img src="screenshots/01-domain-controller.png" alt="Domain Controller Architecture" width="250">
+
 #### How I applied it in the Lab:
 - In my homelab hosted on Microsoft Azure,
     - Deployed Windows Server and promoted to a DC
