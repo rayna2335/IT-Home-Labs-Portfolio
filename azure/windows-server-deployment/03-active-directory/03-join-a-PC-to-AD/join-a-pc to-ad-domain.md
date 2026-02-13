@@ -13,10 +13,9 @@ The purpose of this lab is to understand how to domain join a PC and verify that
 ## Prerequisites
 1. Have Windows Server hosted on Microsoft Azure cloud
 2. Roles and Features are installed on Windows Server
-    - Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md) 
-
+    - Refer to: [Windows Server 2025 Deployment][wsd]
 3. Promote Windows Server to Domain Controller 
-    - Refer to: [Domain Controller Promotion](/azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md)
+    - Refer to: [Domain Controller Promotion][dcp]
 
 
 ## Steps
@@ -24,7 +23,7 @@ The purpose of this lab is to understand how to domain join a PC and verify that
 ### Step 1: Create a Virtual PC
 *Note: In Microsoft Azure, use the Windows Server 2025 Datacenter image since the Windows 11 Pro requires a license*
 
-- Follow the same setup in: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md) and name the VM.
+- Follow the same setup in: [Windows Server 2025 Deployment][wsd] and name the VM.
 
 - Check Virtual Network (VNet) by going to the **Networking** tab.
 - Set **VNet** same as your DC.
@@ -56,7 +55,7 @@ The purpose of this lab is to understand how to domain join a PC and verify that
 - Go to **Computer Name** tab
 - The device is initially set to WORKGROUP
 - Click 'Change..' to join this PC to the DC
-- Click **Member of Domain** option and enter the same domain name from: [Domain Controller Promotion](/azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md) (In this case: **lab.local**)
+- Click **Member of Domain** option and enter the same domain name from: [Domain Controller Promotion][dcp] (In this case: **lab.local**)
 
 <img src="screenshots/02-add-domain-name-as-a-member-of-this-pc.png" alt="Add domain name as a member of this PC" width="650">
 
@@ -134,3 +133,12 @@ Another way to check:
 
 ## Notes:
 - Joining a domain only works for windows version Pro/Enterprise. Windows home version does not have the functionally to join the server.
+
+
+
+
+[wsd]: /azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md
+
+[dcp]: /azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md
+
+[ugm]: /azure/windows-server-deployment/03-active-directory/01-user-and-group-management/create-users-and-groups.md

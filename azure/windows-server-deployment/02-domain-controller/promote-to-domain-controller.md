@@ -23,7 +23,7 @@ In this lab, I will:<br>
 
 \* For DC promotion, only AD DS and DNS Servers are required.
 
-<br>Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md)
+<br>Refer to: [Windows Server 2025 Deployment][wsd]
 
 ## Steps
 ### Step 1: Access All Servers Task Details and Notifications
@@ -67,3 +67,7 @@ In this lab, I will:<br>
 ## Notes
 - Domain Controllers have a writable copy of the Active Directory database, which allows any changes made to users, groups, or computures are automatically updates accross devices.
 - A Forest represents a top level Active Directory and defines domain name spaces.
+
+
+
+[wsd]: /azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md

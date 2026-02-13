@@ -6,11 +6,10 @@ The purpose of this lab is to add users to the domain and group them to keep per
 ## Prerequisites
 1. Have Windows Server hosted on Microsoft Azure cloud
 2. Roles and Features are installed on Windows Server
-    - Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md) 
+    - Refer to: [Windows Server 2025 Deployment](wsd) 
 
 3. Promote Windows Server to Domain Controller 
-    - Refer to: [Domain Controller Promotion](/azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md)
-
+    - Refer to: [Domain Controller Promotion][dcp]
 
 ## Steps
 
@@ -55,3 +54,9 @@ The purpose of this lab is to add users to the domain and group them to keep per
 ## Concepts used in this lab
 1. domain
 2. Active Directory Users and Computers (ADUC)
+
+
+
+[wsd]: /azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md
+
+[dcp]: /azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md

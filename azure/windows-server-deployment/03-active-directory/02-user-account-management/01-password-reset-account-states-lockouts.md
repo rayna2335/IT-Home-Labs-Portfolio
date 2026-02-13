@@ -6,13 +6,13 @@ The purpose of this lab is to manage user accounts by performing a password rese
 ## Prerequisites
 1. Have Windows Server hosted on Microsoft Azure cloud
 2. Roles and Features are installed on Windows Server
-    - Refer to: [Windows Server 2025 Deployment](/azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md) 
+    - Refer to: [Windows Server 2025 Deployment][wsd] 
 
 3. Promote Windows Server to Domain Controller 
-    - Refer to: [Domain Controller Promotion](/azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md)
+    - Refer to: [Domain Controller Promotion][dcp]
 
 4. Users and groups are populated into the domain 
-    - Refer to: [User and Group Management](/azure/windows-server-deployment/03-active-directory/01-user-and-group-management/create-users-and-groups.md)
+    - Refer to: [User and Group Management][ugm]
 
 ## Steps to Reset Passsword
 ### Step 1: Reset Password
@@ -53,7 +53,7 @@ The purpose of this lab is to manage user accounts by performing a password rese
 ---
 ## Steps to Move Users to Another OU in Active Directory
 ### Step 1: Create another OU
-Refer to: [Domain Controller Promotion - Step 5](/azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md)
+Refer to: [Domain Controller Promotion - Step 5][dcp]
 
 ### Step 2: Move a user from one OU to another
 - Select the usr from the source OU
@@ -62,3 +62,11 @@ Refer to: [Domain Controller Promotion - Step 5](/azure/windows-server-deploymen
 
 
 ## Notes
+
+
+
+[wsd]: /azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md
+
+[dcp]: /azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md
+
+[ugm]: /azure/windows-server-deployment/03-active-directory/01-user-and-group-management/create-users-and-groups.md

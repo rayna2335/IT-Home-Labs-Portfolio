@@ -10,7 +10,4 @@
 
 
 ## Notes
-1. Computer configuration
-    - diasble domain Firewall
-    - preferences: users can decide its rules
-    - policies: users cannot have the right to change any options
+- Every changes made to the Computer or User Configuration is updated onto the Registery
