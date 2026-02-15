@@ -8,7 +8,13 @@ The purpose of this lab is to understand how to domain join a PC and verify that
 - DNS resolution to DC
 - Proper credentials 
 
-## Architecture
+## Network Diagram
+<p align="center">
+  <img src="screenshots/00-architecture.png" 
+       alt="Lab Architecture" 
+       width="450"><br>
+  <em>Figure 1: Network Diagram: 1 DC, 2 PCs (clients), with configuration set up on the server and PC
+</p>
 
 ## Prerequisites
 1. Have Windows Server hosted on Microsoft Azure cloud
