@@ -27,7 +27,7 @@ ___
 - Authenticate the identity of users and computers
 - Authorize access, permissions to resources inside a domain
 
-**Lab Implementation (My experience)**: In my Microsoft Azure homelab, I deployed a Windows Server 2025 image and promoted to a DC. By installing and configuring AD DS, I created a centralized management for the madeup users and endpoints in my virtual network.
+**Lab Implementation (My experience)**: In my Microsoft Azure homelab, I deployed a Windows Server 2025 image and promoted to a DC. By installing and configuring AD DS, I created a centralized management for the madeup users and groups in my virtual network.
 
 #### Troubleshooting insights (Tips): 
 
