@@ -3,17 +3,12 @@
 ## Objective
 The purpose of this lab is to understand how to domain join a PC and verify that a PC is connected to the DC. <br>
 
-## How Domain Join Works (Concept)
-- Network connectivit to the DC
-- DNS resolution to DC
-- Proper credentials 
-
 ## Network Diagram
 <p align="center">
   <img src="screenshots/00-network-diagram.png" 
        alt="Network Diagram" 
        width="350"><br>
-  <em>Figure 1: Network Diagram: 1 DC, 1 PC client, with configuration set up on the server and PC
+  <em>Figure 1: Network Diagram: 1 DC, 1 PC client, with configuration set up on the server and PC</em>
 </p>
 
 ## Prerequisites
