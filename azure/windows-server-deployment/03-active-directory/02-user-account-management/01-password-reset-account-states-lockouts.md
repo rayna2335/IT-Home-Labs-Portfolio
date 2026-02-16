@@ -53,15 +53,13 @@ The purpose of this lab is to manage user accounts by performing a password rese
 ---
 ## Steps to Move Users to Another OU in Active Directory
 ### Step 1: Create another OU
-Refer to: [Domain Controller Promotion - Step 5][dcp]
+Refer to: [Domain Controller Promotion - Step 5](../../02-domain-controller/promote-to-domain-controller.md#step-5-create-users-groups-and-computers-ou)
 
 ### Step 2: Move a user from one OU to another
 - Select the usr from the source OU
 - Click and drag the user to the destination OU (or right click and select **Move**) 
 <img src="screenshots/04-moving-user-to-another-OU.png" alt="Moved user to another OU" width="650">
 
-
-## Notes
 
 ## Concepts used in this lab
 [Domain Controller](../../../00-concepts/concepts.md#🔸-domain-controller-dc)
