@@ -38,6 +38,18 @@ ___
 ---
 ---
 
+## 🔸 Server Manager
+
+**What is it?** A centralized Windows server management tool that allows the administrator to manage, monitor, and configure local/remote servers, including thier roles, features, and settings.
+
+**What does it do?** 
+- Install server roles (DNS, AD DS, DHCP, File Services, Web Server...)
+
+**Lab Implementation (My Experience)**: After provisioning and logging into Windows Server on Microsoft Azure, Server Manager automatically starts up by default. On Server Manager, I installed a AD DS and DNS to create a functional DC.
+
+---
+---
+
 ## 🔸 Registery
 
 **What is it?**
@@ -165,17 +177,6 @@ ___
 ---
 
 ## 🔸 Local Credentials
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Server Manager
 
 **What is it?**
 
