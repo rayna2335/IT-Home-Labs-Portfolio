@@ -35,181 +35,208 @@ ___
 
 **Lab Implementation (My experience)**: In my Microsoft Azure homelab, I deployed a Windows Server 2025 image and promoted to a DC. By installing and configuring AD DS, I created a centralized management for the madeup users and groups in my virtual network.
 
-#### Troubleshooting insights (Tips): 
-
 ---
+---
+
 ## 🔸 Registery
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
+
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
 
 ---
+---
+
 ## 🔸 Default Domain Policy
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
+
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
 
 ---
+---
+
 ## 🔸 Group Policy Management Editor
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
+
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
 
 ---
+---
+
 ## 🔸 Policies vs Preferences
 
-### Definition:
+**What is it?**
 - Policies: Users does not have the right to change any options. Implemented with the registery.
 
 - Preferences: Users can decide its own rules to set. The original preference setting will default after each start up.
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
 
 ---
+---
+
 ## 🔸 Computer Configuration
 
-### Definition:
-### Purpose:
-### How it works:
+**What is it?**
+
+**What does it do?**
 - Settings applies to the computer itself, and configure how the machines should behave.
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+
+**Lab Implementation (My Experience)**:
 
 ---
+---
+
 ## 🔸 User Configuration
 
-### Definition:
-### Purpose:
-### How it works:
-- Setting applies to the user, no matter what computer they log into.
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
+**What does it do?**
+- Setting applies to the user, no matter what computer they log into.
+
+**Lab Implementation (My Experience)**:
+
+---
 ___
+
 ## 🔸 VNet
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Subnet
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Ethernet Connctor
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Domain Credentials
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Local Credentials
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
-## 🔸 
+**What does it do?**
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
-___
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Local Credentials
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Server Manager
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 DHCP
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 DNS
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Organizational Unit
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
+**What does it do?**
 
-___
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Root Domain Name
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
-___
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
+
 ## 🔸 Forest
 
-### Definition:
-### Purpose:
-### How it works:
-### How I applied it in the Lab:
-### Troubleshooting insights (Tips):
+**What is it?**
 
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
+
+---
+---
