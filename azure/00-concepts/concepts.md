@@ -186,17 +186,6 @@ ___
 ---
 ---
 
-## 🔸 DHCP
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
 ## 🔸 DNS
 
 **What is it?**

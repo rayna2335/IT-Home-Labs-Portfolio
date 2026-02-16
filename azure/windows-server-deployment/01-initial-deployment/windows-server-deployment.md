@@ -1,17 +1,22 @@
 # Windows Server 2025 Deployment on Microsoft Azure
 
 ## Objective
-Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure and to install the tools and features such as, Active Directory Domain Services, DHCP Server, DNS Server, Group Policy Management, Print and Document Services, and Web Server (IIS). 
+Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure and to install the tools and features such as, Active Directory Domain Services, DNS Server, and Group Policy Management. 
 
 ## Lab Environment
 **Cloud Platform:** Microsoft Azure<br>
 **Operating System:** Windows Server 2025 Datacenter: Azure Edition
 
 ## Prerequisites
-- Create an account on Microsoft Azure
+- Create an account on [Microsoft Azure](https://portal.azure.com/auth/login/)
 
-## Architecture Overview
-- [Windows Server] ----- Roles and features
+## Network Diagram
+<p align="center">
+  <img src="screenshots/00-network-diagram.png"
+       alt="Network Diagram with DC-1 and PC-1 VMs" 
+       width="250"><br>
+  <em>Active Directory Domain Services (AD DS) role installed on a Windows Server 2025 Datacenter on Azure, and PC-1 for the client </em>
+</p>
 
 ## Steps
 ### Step 1: Create a Microsoft Azure account
@@ -24,7 +29,7 @@ Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure an
 <img src="screenshots/02-virtual%20machine%20review.png" alt="VM review" width="650" />
 
 **Subscription**: Azure Subscription 1<br>
-**Resource Group**: name your Window server (Purpose is to keep all resources together)<br>
+**Resource Group**: Name your Window server (Purpose is to keep all resources together)<br>
 **Virtual machine name**: Name your VM<br>
 **Region**: Enter your location <br>
 **Availability options**: Availability zone<br>
@@ -33,8 +38,8 @@ Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure an
 **Security type**: Trusted launch virtual machines<br>
 **Image**: Windows Server 2025 Datacenter: Azure Edition - x64 Gen2<br>
 **Size**: Standard_E2s_v3 - 2 vcpus, 16 GiB memory ($181.04)<br>
-**Username**: enter any username<br>
-**Password**: enter any password<br>
+**Username**: Enter any username<br>
+**Password**: Enter any password<br>
 **Inbound ports**: None
 
 ### Step 4: Wait for deployment to complete processing
@@ -47,16 +52,10 @@ Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure an
 - Search your VM name and click on 'Connect', and 'Connect via Bastion'. Then enter your Username and password to connect.
 <img src="screenshots/03-Connect VM.png" alt="Connect VM" width="650" />
 
-### Step 7: Configure Server Manager to stop automatically showing after logon (Optional)
-- Go to 'Manage', 'Properties', and then check mark ‘Do not start Server Manager automatically at logon'.
-
-### Step 8: Install roles and features
+### Step 7: Install roles and features
 - Click 'Manage' -> 'Add Roles and Features' -> and add the roles and feaures in the Server Roles.<br>
-    - Active Directory Domain Services
-    - DHCP Servers
-    - DNS Servers
-    - Print and Document Services
-    - Web Server (IIS)<br>
+    - Active Directory Domain Services (AD DS)
+    - DNS Servers<br>
 
 - Then click on 'Install' and let the system install its roles and features.
 
@@ -79,7 +78,5 @@ Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure an
 [Domain Controller](../../00-concepts/concepts.md#🔸-domain-controller-dc)
 
 [Server Manager](../../00-concepts/concepts.md#🔸-server-manager)
-
-[DHCP](../../00-concepts/concepts.md#🔸-dhcp)
 
 [DNS](../../00-concepts/concepts.md#🔸-dns)
