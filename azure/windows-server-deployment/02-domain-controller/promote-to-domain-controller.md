@@ -5,7 +5,7 @@ A Domain Controller (DC) manages authentication, authorization, and directory se
 
 In this lab, I will:<br>
 
-- Promote a Windows Server to a domain controller
+- Promote a Windows Server to a DC
 - Create a domain name
 - Add forests and OUs
 - Verify the steps
@@ -17,9 +17,6 @@ In this lab, I will:<br>
     Those are:
 - Active Directory Domain Services (AD DS)
 - DNS Servers
-- DHCP Servers (Used in future lab)
-- Print and Document Services (Used in future lab)
-- Web Server (IIS) (Used in future lab)
 
 \* For DC promotion, only AD DS and DNS Servers are required.
 
@@ -70,14 +67,13 @@ In this lab, I will:<br>
 
 
 ## Concepts used:
+[Active Directory](../../00-concepts/concepts.md#🔸-active-directory)
 
 [Domain Controller](../../00-concepts/concepts.md#🔸-domain-controller-dc)
 
 [Organizational Unit](../../00-concepts/concepts.md#🔸-organizational-unit)
 
 [Root Domain Name](../../00-concepts/concepts.md#🔸-root-domain-name)
-
-[Active Directory](../../00-concepts/concepts.md#🔸-active-directory)
 
 [Forest](../../00-concepts/concepts.md#🔸-forest)
 
