@@ -50,6 +50,28 @@ ___
 ---
 ---
 
+## 🔸 Organizational Unit
+
+**What is it?** A container object in Active Directory that helps organizes/manages network resources. Such as users, computers, and groups. These are separated logically to help regulate the network with proper policies, access controls, and security settings.
+
+**What does it do?**
+- Assign specific roles to users, computers, and groups in a structured corporate network.
+
+**Lab Implementation (My Experience)**:
+
+<p align="center">
+  <img src="screenshots/03-organizational-unit.png" 
+       alt="Domain Architecture" 
+       width="250"><br>
+  <em>Figure 2: Domain Architecture Overview</em>
+</p>
+
+ In the Active Directory Users and Computers tab (ADUC), I created three OUs, users, computers, and groups under my root domain name. And within those OUs, I assigned users to groups to efficiently assign policies/access control to users in their respective roles.
+
+
+---
+---
+
 ## 🔸 Registery
 
 **What is it?**
@@ -188,17 +210,6 @@ ___
 ---
 
 ## 🔸 DNS
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Organizational Unit
 
 **What is it?**
 
