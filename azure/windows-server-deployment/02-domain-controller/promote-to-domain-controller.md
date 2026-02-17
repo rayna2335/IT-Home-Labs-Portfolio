@@ -22,6 +22,15 @@ In this lab, I will:<br>
 
 <br>Refer to: [Windows Server 2025 Deployment][wsd]
 
+## Network Diagram
+
+<p align="center">
+  <img src="screenshots/00-domain-architecture.png" 
+       alt="Domain Architecture" 
+       width="250"><br>
+  <em>Figure 2: Domain Architecture Overview</em>
+</p>
+
 ## Steps
 ### Step 1: Access All Servers Task Details and Notifications
 - On the Server Manager, go to the 'AD DS' tab on the left and click on 'More..' that says "Configuration required for Active Directory Domain Services at 'your domain name'"
