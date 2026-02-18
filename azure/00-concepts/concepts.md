@@ -68,6 +68,18 @@ ___
 
  In the Active Directory Users and Computers tab (ADUC), I created three OUs, users, computers, and groups under my root domain name. And within those OUs, I assigned users to groups to efficiently assign policies/access control to users in their respective roles.
 
+---
+---
+
+## 🔸 Root Domain Name
+
+**What is it?**  Root Domain Name is the first domain in a new Active Directory forest. It is a top-level forest hierarchy that forms the foundation for all child domains. Child domains are usually used only in large enterprise environments where admin or organizational separation is required.
+
+**What does it do?** 
+- Anchor to the entire forest
+- All child domains depend on it
+
+**Lab Implementation (My Experience)**: In my lab, I created a root domain name called **lab.local** and organized resources using OU within that domain to simulate a structured enterprise enviroment.
 
 ---
 ---
@@ -210,17 +222,6 @@ ___
 ---
 
 ## 🔸 DNS
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Root Domain Name
 
 **What is it?**
 
