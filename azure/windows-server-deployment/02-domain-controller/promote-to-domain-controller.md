@@ -84,7 +84,5 @@ In this lab, I will:<br>
 
 [Root Domain Name](../../00-concepts/concepts.md#🔸-root-domain-name)
 
-[Forest](../../00-concepts/concepts.md#🔸-forest)
-
 
 [wsd]: /azure/windows-server-deployment/01-initial-deployment/windows-server-deployment.md

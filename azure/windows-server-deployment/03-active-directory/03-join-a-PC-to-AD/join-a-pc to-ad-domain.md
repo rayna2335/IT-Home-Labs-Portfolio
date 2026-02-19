@@ -133,13 +133,7 @@ Another way to check:
 
 [VNet](../../../00-concepts/concepts.md#🔸-vnet)
 
-[Subnet](../../../00-concepts/concepts.md#🔸-subnet)
-
 [Ethernet Connctor](../../../00-concepts/concepts.md#🔸-ethernet-connctor)
-
-[Domain Credentials](../../../00-concepts/concepts.md#🔸-domain-credentials)
-
-[Local Credentials](../../../00-concepts/concepts.md#🔸-local-credentials)
 
 
 

@@ -84,77 +84,6 @@ ___
 ---
 ---
 
-## 🔸 Registery
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Default Domain Policy
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Group Policy Management Editor
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Policies vs Preferences
-
-**What is it?**
-- Policies: Users does not have the right to change any options. Implemented with the registery.
-
-- Preferences: Users can decide its own rules to set. The original preference setting will default after each start up.
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Computer Configuration
-
-**What is it?**
-
-**What does it do?**
-- Settings applies to the computer itself, and configure how the machines should behave.
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 User Configuration
-
-**What is it?**
-
-**What does it do?**
-- Setting applies to the user, no matter what computer they log into.
-
-**Lab Implementation (My Experience)**:
-
----
-___
-
 ## 🔸 VNet
 
 **What is it?**
@@ -188,57 +117,23 @@ ___
 ---
 ---
 
-## 🔸 Domain Credentials
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Local Credentials
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
-## 🔸 Local Credentials
-
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
-
 ## 🔸 DNS
 
-**What is it?**
+**What is it?** Translates human-readable domain names into machine-readable IP addresses so that computers can locate each other on a network.
 
-**What does it do?**
+**What does it do?** 
+* Active Directory relies on DNS to locate DC using SRV records. Without DNS, domain join, and authentication will fail.
+* When a client attempts to join a domain or authenticate, it queries DNS to find: DC/LDAP service/Kerberos services.
 
-**Lab Implementation (My Experience)**:
+**Lab Implementation (My Experience)**: 
 
----
----
+<p align="center">
+  <img src="screenshots/04-dns.png" 
+       alt="DNS Process Diagram." 
+       width="250"><br>
+  <em>Figure 2: DNS Process Diagram</em>
+</p>
 
-## 🔸 Forest
+In my lab, I installed AD DS on a Windows server and promoted it to a Domain Controller. During the promotion process, DNS was installed automatically, and DNS (SRV) was created for my domain (**lab.local**)
+When configuring my client machine, I set the client's DNS server to the private IP address of the DC. When DNS was configured correctly, I was able to join the client to the domain and log in using the domain credentials. To verify it was working, I used the  command **ping**.
 
-**What is it?**
-
-**What does it do?**
-
-**Lab Implementation (My Experience)**:
-
----
----
