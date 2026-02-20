@@ -53,19 +53,6 @@ In this lab, I will:<br>
 
     \* Organizational Unit (OU) is populated under your root domain name that you created in Step 3.
 
-### Step 5: Create Users, Groups, and Computers OU
-- Right click on your **root domain name** -> **New** -> **Organizational Unit** and name your branch. 
-- Right click on the OU you just created, add new -> OU, and name it 'Users.'
-- Repeat the process to add 'Groups' and 'Computers' under your branch.
-<img src="screenshots/04-create-ou-user-group-computer.png" alt="New OU with Users, Groups, Computers" width="650">
-
-### Step 6: Add a User in the User OU
-- Right click on **Users** you just created -> click **New** -> **User**
-- Enter first, last name, and User logon name in this format: `firstInitial.lastname`
-- Click **next**, and create an password and click **finish**.
-<img src="screenshots/05-create-user.png" alt="Create a user inside User OU" width="650">
-
-*A user successfully created under the Users OU*
 
 ## Notes
 - Domain Controllers have a writable copy of the Active Directory database, which allows any changes made to users, groups, or computures are automatically updates accross devices.
