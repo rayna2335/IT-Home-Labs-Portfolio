@@ -53,7 +53,7 @@ The purpose of this lab is to manage user accounts by performing a password rese
 ---
 ## Steps to Move Users to Another OU in Active Directory
 ### Step 1: Create another OU
-Refer to: [Domain Controller Promotion - Step 5](../../02-domain-controller/promote-to-domain-controller.md#step-5-create-users-groups-and-computers-ou)
+Refer to: [Domain Controller Promotion - Step 5](../../02-domain-controller/promote-to-domain-controller.md#step-5-add-users-groups-and-computers-ou)
 
 ### Step 2: Move a user from one OU to another
 - Select the usr from the source OU
@@ -69,4 +69,4 @@ Refer to: [Domain Controller Promotion - Step 5](../../02-domain-controller/prom
 
 [dcp]: /azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md
 
-[ugm]: /azure/windows-server-deployment/03-active-directory/01-user-and-group-management/create-users-and-groups.md
+[ugm]: /azure/windows-server-deployment/03-active-directory/01-user-and-group-management/add-users-and-groups.md

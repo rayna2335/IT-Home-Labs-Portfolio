@@ -1,4 +1,4 @@
-# Create Users and Groups
+# Add Users and Groups
 
 ## Objective
 The purpose of this lab is to add users to the domain and group them to keep permissions organized within the enterprise enviroment. Adding users to the group OU saves time rather than individually assigning each user permissions.<br>

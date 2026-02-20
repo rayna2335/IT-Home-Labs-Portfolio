@@ -142,4 +142,4 @@ Another way to check:
 
 [dcp]: /azure/windows-server-deployment/02-domain-controller/promote-to-domain-controller.md
 
-[ugm]: /azure/windows-server-deployment/03-active-directory/01-user-and-group-management/create-users-and-groups.md
+[ugm]: /azure/windows-server-deployment/03-active-directory/01-user-and-group-management/add-users-and-groups.md
