@@ -26,7 +26,7 @@ Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure an
 - Click on 'create a resource' and click on 'Create' for the Virtual machine option.
 
 ### Step 3: Configure the Virtual machine
-<img src="screenshots/02-virtual%20machine%20review.png" alt="VM review" width="650" />
+<img src="screenshots/02-configure-dc-vm.png" alt="DC's VM overview" width="380" />
 
 **Subscription**: Azure Subscription 1<br>
 **Resource Group**: Name your Window server (Purpose is to keep all resources together)<br>
@@ -46,35 +46,41 @@ Deploy and configure a Windows Server 2025 virtual machine in Microsoft Azure an
 - Click on 'Create' to delopy VM.
 
 ### Step 5: Set static IP for Domain Controller (DC)
-- On the side bar, go to 'Networking' and 'Network settings'. Click on your 'Network interface', then on IP config setting, set the private IP address to static.
+- After successful deployement message, click on **Go to resource**.
+- Click on the 'Networking** dropdown menu, then 'Network settings'.
+- Click on your **Network interface / IP configuration** then in IP Settings click on the **ipconfig** link
+- Set the private IP address settings to static.
+
+<img src="screenshots/03-ip-configuration.png" alt="IP Configuration setting" width="650" />
 
 ### Step 6: Connect to your Virtual Machine
-- Search your VM name and click on 'Connect', and 'Connect via Bastion'. Then enter your Username and password to connect.
-<img src="screenshots/03-Connect VM.png" alt="Connect VM" width="650" />
+- Search your VM name and click on **Connect**, and **Connect via Bastion**. Then enter your username and password to connect.
+<img src="screenshots/04-Connect VM.png" alt="Connect VM" width="550" />
 
 ### Step 7: Install roles and features
-- Click 'Manage' -> 'Add Roles and Features' -> and add the roles and feaures in the Server Roles.<br>
+- On the Server Manager dashboard, click **Manage** -> **Add Roles and Features** -> add the roles and features necessary for the Windows Server.<br>
+- Install the following:
     - Active Directory Domain Services (AD DS)
     - DNS Servers<br>
 
-- Then click on 'Install' and let the system install its roles and features.
-
-<img src="screenshots/04-Install%20Roles%20and%20features.png" alt="Install roles and features" width="650" />
+- Click on **Install** and let the system install its roles and features.
 
 ### Step 9: Restart your Windows Server
-- Click on Windows and 'Restart'
+- Close out of the tab and restart your Windows Server.
 
 ### Step 10: Log back into your Window Server
 - You will have a fully functional Windows Server instance with roles and features all set up.
-<img src="screenshots/05-Server Manager with roles and features installed.png" alt="Server Manager with roles and features installed" width="650">
+<img src="screenshots/06-server-manager-role-and-server-installation.png" alt="Server Manager with roles and features installed" width="550">
 
 ## Issues/Troubleshooting
-- To ensure you keep your costs low on Microsoft Azure, make sure to deallocate your VM after each use OR you can delete the resource group to keep it at no cost (Optional)
+- To keep your costs low on Microsoft Azure, make sure to deallocate your VM after each use OR you can delete the resource group to keep it at no cost (Optional)
 
 ## What I Learned
-- I learned how to set up Windows server on the cloud and set up the roles and features needed in a common enterprice enviroment.
+- I learned how to set up Windows server with roles and features needed on a virtual environment.
 
 ## Concepts used:
+[Active Directory Domain Services](../../00-concepts/concepts.md#🔸-active-directory-domain-services)
+
 [Domain Controller](../../00-concepts/concepts.md#🔸-domain-controller-dc)
 
 [Server Manager](../../00-concepts/concepts.md#🔸-server-manager)

@@ -137,3 +137,14 @@ ___
 In my lab, I installed AD DS on a Windows server and promoted it to a Domain Controller. During the promotion process, DNS was installed automatically, and DNS (SRV) was created for my domain (**lab.local**)
 When configuring my client machine, I set the client's DNS server to the private IP address of the DC. When DNS was configured correctly, I was able to join the client to the domain and log in using the domain credentials. To verify it was working, I used the  command **ping**.
 
+
+---
+---
+
+## 🔸 Active Directory Domain Services
+
+**What is it?**
+
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
