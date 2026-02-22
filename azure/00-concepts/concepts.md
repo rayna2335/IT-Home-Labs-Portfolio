@@ -86,11 +86,23 @@ ___
 
 ## 🔸 VNet
 
-**What is it?**
+**What is it?** Virtual Network (VNet) is a networking componet of Microsoft Azure that allows you to create a logically isolated network in the cloud. VNet allows you to configure IP addresses, subnets, network security rules, and DNS settings. It acts as a traditional on-premise network but operates within Azure cloud infrastructure.
 
 **What does it do?**
+- A virtual network segments/isolates cloud resources.
+- Able to communicate between VMs and allow secure connections.
+- Resources on the same VNet can communicate with each other by default.
 
 **Lab Implementation (My Experience)**:
+
+<p align="center">
+  <img src="screenshots/05-vnet.png" 
+       alt="Domain Architecture" 
+       width="350"><br>
+  <em>Figure 2: VNet Architecture Overview</em>
+</p>
+
+In my lab using Microsoft Azure, I created a Virtual Network and depolyed a DC VM with a private IP address and a client PC VM. I verified both network connectivity and successfully joined the client PC to the Active Directory domain. This setup allows both VMs to communicate internally within the same Virtual Network.
 
 ---
 ---
