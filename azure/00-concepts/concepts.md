@@ -160,3 +160,11 @@ When configuring my client machine, I set the client's DNS server to the private
 **What does it do?**
 
 **Lab Implementation (My Experience)**:
+
+
+## 🔸 Group Policy Management Console
+**What is it?**
+
+**What does it do?**
+
+**Lab Implementation (My Experience)**:
