@@ -1,7 +1,7 @@
 # Group Policy Object
 
 ## Objective
-Group Policy Object (GPO) is a feature in Active Directory that enables to centrally manage and configure users and computers in a Windows environment. The objective of this lab is to configure and apply multiple Group Policy Objects (GPOs) in Active Directory using Group Policy Management Console to enforce security and user environment standards within a domain enviroment.
+Group Policy Object (GPO) is a feature in Active Directory that enables to centrally manage and configure users and computers in a Windows environment. The objective of this lab is to configure and apply multiple Group Policy Objects (GPOs) in Active Directory using Group Policy Management Console to enforce security and user environment standards within a domain environment.
 
 ## Environment Overview
 <p align="center">
